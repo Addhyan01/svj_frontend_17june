@@ -103,7 +103,7 @@ export default function Contact() {
             <div>
               <h4 className="font-black text-gray-900 text-sm sm:text-base">Registered Head Office</h4>
               <p className="text-sm text-gray-600 font-medium mt-0.5">Sabka Vikas jayti, 
- GPS Parishar 1st Floor,<br />  New Kaloni, Ajadnagar, Ward No - 35, <br /> Mohanpur, Samastipur, Bihar - 848101</p>
+ GPS Parishar 1st Floor,<br />  New Kaloni, Azadnagar, Ward No - 35, <br /> Mohanpur, Samastipur, Bihar - 848101</p>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="font-black text-gray-900 text-sm sm:text-base">Email Support</h4>
-              <p className="text-sm text-gray-600 font-medium mt-0.5">info@sabkavikasjyoti.org</p>
+              <p className="text-sm text-gray-600 font-medium mt-0.5">info@sabkavikasjayti.org</p>
             </div>
           </div>
 

@@ -271,7 +271,7 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="font-black text-gray-900 text-sm sm:text-base">Our Location</h4>
-              <p className="text-sm text-gray-500 font-medium">Sabka Vikas Jayti — Patna, Bihar, India</p>
+              <p className="text-sm text-gray-500 font-medium">Sabka Vikas Jayti — Samastipur, Bihar, India</p>
             </div>
           </div>
           <iframe

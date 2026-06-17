@@ -108,13 +108,13 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-xs uppercase tracking-wide mb-0.5"> WhatsApp</p>
-                  <a
-                    href="https://wa.me/917209985021"
+                   <a
+                    href="https://wa.me/917366033393"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-green-400 transition text-gray-400"
                   >
-                    +91 7209985021
+                    +91 7366033393
                   </a>
                 </div>
               </li>

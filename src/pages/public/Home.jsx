@@ -3,6 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import logoImg from '../../assets/logo.png';
 import { PROGRAMS } from './programsData';
 
+// ── Mission Pillar images (thumbnails)
+import pillarEducation from '../../assets/programs/a1.png';
+import pillarHealth from '../../assets/programs/a2.png';
+import pillarWomen from '../../assets/programs/a3.png';
+import pillarEnvironment from '../../assets/programs/a4.png';
+
 // ── Hero slideshow images — add/replace files in src/assets/
 // Name them hero-1.jpg, hero-2.jpg ... hero-5.jpg
 import hero1 from '../../assets/hero-1.jpeg';
@@ -482,10 +488,10 @@ export default function Home() {
   ];
 
   const pillars = [
-    { icon: '📚', title: 'शिक्षा', color: 'bg-purple-100', text: 'हम गुणवत्तापूर्ण शिक्षा को हर बच्चे और युवा तक पहुँचाने के लिए कार्य करते हैं। शिक्षा जागरूकता अभियान, अध्ययन सामग्री वितरण और कौशल विकास कार्यक्रमों के माध्यम से हम बेहतर भविष्य की नींव रखते हैं।' },
-    { icon: '👩‍⚕️', title: 'स्वास्थ्य', color: 'bg-emerald-100', text: 'स्वस्थ समाज के निर्माण हेतु हम स्वास्थ्य जागरूकता, निःशुल्क स्वास्थ्य शिविरों और जरूरतमंद लोगों को चिकित्सा सहायता प्रदान करने के लिए निरंतर प्रयासरत हैं।' },
-    { icon: '🤝', title: 'महिला एवं बाल सशक्तिकरण', color: 'bg-yellow-100', text: 'हम महिलाओं और बच्चों को सुरक्षित, शिक्षित और आत्मनिर्भर बनाने के लिए विभिन्न कार्यक्रम संचालित करते हैं, जिससे वे अपने अधिकारों और अवसरों का पूर्ण लाभ उठा सकें।' },
-    { icon: '🌱', title: 'सामुदायिक एवं पर्यावरण विकास', color: 'bg-blue-100', text: 'हम स्वच्छता, वृक्षारोपण, पर्यावरण संरक्षण और सामुदायिक विकास गतिविधियों के माध्यम से एक टिकाऊ और समृद्ध समाज के निर्माण की दिशा में कार्य करते हैं।' },
+    { img: pillarEducation, title: 'शिक्षा', color: 'bg-purple-100', text: 'हम गुणवत्तापूर्ण शिक्षा को हर बच्चे और युवा तक पहुँचाने के लिए कार्य करते हैं। शिक्षा जागरूकता अभियान, अध्ययन सामग्री वितरण और कौशल विकास कार्यक्रमों के माध्यम से हम बेहतर भविष्य की नींव रखते हैं।' },
+    { img: pillarHealth, title: 'स्वास्थ्य', color: 'bg-emerald-100', text: 'स्वस्थ समाज के निर्माण हेतु हम स्वास्थ्य जागरूकता, निःशुल्क स्वास्थ्य शिविरों और जरूरतमंद लोगों को चिकित्सा सहायता प्रदान करने के लिए निरंतर प्रयासरत हैं।' },
+    { img: pillarWomen, title: 'महिला एवं बाल सशक्तिकरण', color: 'bg-yellow-100', text: 'हम महिलाओं और बच्चों को सुरक्षित, शिक्षित और आत्मनिर्भर बनाने के लिए विभिन्न कार्यक्रम संचालित करते हैं, जिससे वे अपने अधिकारों और अवसरों का पूर्ण लाभ उठा सकें।' },
+    { img: pillarEnvironment, title: 'सामुदायिक एवं पर्यावरण विकास', color: 'bg-blue-100', text: 'हम स्वच्छता, वृक्षारोपण, पर्यावरण संरक्षण और सामुदायिक विकास गतिविधियों के माध्यम से एक टिकाऊ और समृद्ध समाज के निर्माण की दिशा में कार्य करते हैं।' },
   ];
 
   return (
@@ -624,12 +630,20 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((p) => (
               <div key={p.title}
-                className="group p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white text-center space-y-4 cursor-default">
-                <div className={`w-14 h-14 ${p.color} rounded-2xl flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                  {p.icon}
+                className="group rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white overflow-hidden cursor-default">
+                {/* Thumbnail image */}
+                <div className="w-full h-44 overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full  group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="font-black text-gray-900 text-lg">{p.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{p.text}</p>
+                {/* Text content */}
+                <div className="p-5 space-y-2 text-center">
+                  <h3 className="font-black text-gray-900 text-base">{p.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{p.text}</p>
+                </div>
               </div>
             ))}
           </div>

@@ -81,12 +81,12 @@ export default function Login() {
           </button>
         </form>
 
-        <div className="text-center text-sm text-gray-500 font-medium pt-2 border-t border-gray-100">
+        {/* <div className="text-center text-sm text-gray-500 font-medium pt-2 border-t border-gray-100">
           New account?{' '}
           <Link to="/register" className="text-emerald-600 font-bold hover:underline">
             Register here
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </div>

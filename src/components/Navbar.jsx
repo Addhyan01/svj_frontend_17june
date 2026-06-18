@@ -59,7 +59,12 @@ export default function Navbar() {
             ))}
 
             {/* Conditional Authentication View Matrix */}
-            {isLoggedIn ? (
+           
+
+            <Link to="/donation" className="text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition duration-150 transform hover:-translate-y-0.5" style={{ backgroundColor: '#3A7D44' }}>
+              Donate Now
+            </Link>
+             {isLoggedIn ? (
               <>
                 <Link to="/dashboard" className="text-gray-700 hover:text-[#3A7D44] font-bold text-sm bg-gray-100 px-3.5 py-2 rounded-xl transition duration-150">
                   Dashboard
@@ -70,13 +75,9 @@ export default function Navbar() {
               </>
             ) : (
               <Link to="/login" className="text-gray-700 hover:text-[#3A7D44] font-bold text-sm border-2 border-gray-100 hover:border-gray-200 px-4 py-2 rounded-xl transition duration-150">
-                Login / Register
+                Login
               </Link>
             )}
-
-            <Link to="/donation" className="text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition duration-150 transform hover:-translate-y-0.5" style={{ backgroundColor: '#3A7D44' }}>
-              Donate Now
-            </Link>
           </div>
 
           {/* Hamburger Menu Toggle icon button */}
@@ -116,7 +117,7 @@ export default function Navbar() {
               </>
             ) : (
               <Link to="/login" onClick={() => setIsOpen(false)} className="block text-center bg-gray-50 text-gray-700 border border-gray-200 font-bold py-2.5 rounded-xl text-sm">
-                Login / Register
+                Login
               </Link>
             )}
             <Link to="/donation" onClick={() => setIsOpen(false)} className="block text-center text-white font-bold py-3 rounded-xl text-sm shadow-md" style={{ backgroundColor: '#3A7D44' }}>

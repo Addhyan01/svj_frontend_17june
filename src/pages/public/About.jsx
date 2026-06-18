@@ -7,7 +7,7 @@ import cert3 from '../../assets/certificates/cert3.jpg';
 import cert4 from '../../assets/certificates/cert4.jpg';
 import aboutimg from '../../assets/imageabout.png';
 
-const CERTIFICATES = [cert1, cert2, cert3, cert4];
+const CERTIFICATES = [cert1, cert2, cert3];
 
 // ── Stats ─────────────────────────────────────────────────────────────────────
 const STATS = [

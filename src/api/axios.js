@@ -26,13 +26,31 @@ API.interceptors.request.use(
 );
 
 // Auto-logout on 401
+// API.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     if (error.response?.status === 401) {
+//       localStorage.removeItem('token');
+//       window.location.href = '/login';
+//     }
+//     return Promise.reject(error);
+//   }
+// );
+
 API.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    const isLoginRequest =
+      error.config?.url?.includes('/auth/login');
+
+    if (
+      error.response?.status === 401 &&
+      !isLoginRequest
+    ) {
       localStorage.removeItem('token');
       window.location.href = '/login';
     }
+
     return Promise.reject(error);
   }
 );

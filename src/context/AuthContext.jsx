@@ -48,7 +48,9 @@ export const AuthProvider = ({ children }) => {
 
       return { success: true };
     } catch (error) {
-      const msg = error.response?.data?.message || 'Login failed. Check your credentials.';
+      // const msg = error.response?.data?.message || 'Login failed. Check your credentials.';
+            const msg = 'Login failed. Check your credentials.';
+
       return { success: false, error: msg };
     }
   };
